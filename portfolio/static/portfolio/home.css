@@ -1,0 +1,20 @@
+h1 {
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+hr {
+  width:50%;
+  border: 1px solid black;
+}
+
+img.projectpic {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 992px) {
+  #title {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,33 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'portfolio/home.css' %}">
+</head>
+<div class="row justify-content-center">
+  <h1 id="title">Kyles Portfolio</h1>
+</div>
+<hr>
+<div class="row" style="padding-top:30px;">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2" class="projectpic">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
