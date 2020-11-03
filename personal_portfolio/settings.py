@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'n(@$=f^x&u45h_se(w&lzqzk5%^h))x%0$ki$o73pl7-hklco*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kshort.pythonanywhere.com']
 
 
 # Application definition
@@ -120,12 +120,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, "static"),
-    '/personal_portfolio-project/portfolio/static/',
-]
 
 STATIC_URL = '/static/'
+STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_URL = '/media/'
 
