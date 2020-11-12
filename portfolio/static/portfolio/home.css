@@ -1,18 +1,17 @@
 h1 {
   font-size: 50px;
   padding-top: 30px;
+  padding-bottom: : 30px;
 }
 
 hr {
-  width:50%;
+  width:70%;
   border: 1px solid black;
 }
 
 img.projectpic {
   padding-left: 10px;
   padding-right: 10px;
-  height: 200px;
-  width: 20px;
 }
 
 @media (min-width: 992px) {
