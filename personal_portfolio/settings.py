@@ -21,7 +21,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n(@$=f^x&u45h_se(w&lzqzk5%^h))x%0$ki$o73pl7-hklco*'
+# SECRET_KEY = 'n(@$=f^x&u45h_se(w&lzqzk5%^h))x%0$ki$o73pl7-hklco*'
+
+with open('secret_settings.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -131,4 +134,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 try:
     from .local_settings import *
 except ImportError:
-    print("No local file. You're on production")
+    print("No local file. You're on profd")
